@@ -1,0 +1,36 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: webspeak-backend
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/webspeak
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 50MB
+
+
+jwt:
+  secret: webspeakSuperSecretKeyForJwtTokenGeneration2024Secure
+  access-token-expiration: 900000
+  refresh-token-expiration: 604800000
+
+frontend:
+  url: http://localhost:5173
+
+logging:
+  level:
+    com.webspeak: INFO
+    org.springframework.security: WARN
+
+
+
+
